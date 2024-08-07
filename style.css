@@ -19,15 +19,53 @@ body {
   padding: 20px 0;
 }
 
+
 .btn {
-  margin-left: 19rem;
+  margin-left: 20rem;
   margin-top: 2rem;
+  padding: 10px;
   width: 8rem;
   background: linear-gradient(160deg, #FBCA88, #EF69AD, #B236D0);
 }
 
 .btn:hover {
   color: white;
+}
+
+@media(min-width:320px){
+    .btn{
+      margin-left: 3rem;
+    }
+}
+@media(min-width:375px){
+  .btn{
+    margin-left: 5rem;
+  }
+}
+@media(min-width:425px){
+  .btn{
+    margin-left: 6rem;
+  }
+}
+@media(min-width:768px){
+  .btn{
+    margin-left: 13rem;
+  }
+}
+/* @media(min-width:1240px){
+  .btn{
+    margin-left: 20rem;
+  }
+} */
+@media(min-width:1024px){
+  .btn{
+    margin-left:19rem;
+  }
+}
+@media(min-width:1440px){
+  .btn{
+    margin-left: 19rem;
+  }
 }
 
 #dailyForecast .searchBar #locSearchBox {
