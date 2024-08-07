@@ -4,7 +4,7 @@ const apikey1 = "683ffc7061470fceedf039199bbd599e";
 const apiurl1 = `https://api.openweathermap.org/data/2.5/forecast?&units=metric`;
 
 // DOM Elements
-const searchbox = document.querySelector(".search input");
+const searchbox = document.querySelector(".search-input");
 const buttonbox = document.querySelector(".btn");
 const iconLoc = document.querySelector(".icons");
 
@@ -46,10 +46,25 @@ async function checkWeather(location) {
         const html = `<canvas id="weatherIcon" width="100" height="100" class="icons">${iconLoc}src = "F:/Weather_app/img/clouds.png"</canvas>`;
         iconLoc.insertAdjacentHTML("afterend", html);
     } catch (error) {
-        console.error("Error fetching current weather data: ", error);
+        alert("Error fetching current weather data: ", error);
+        this.clearWeatherData();
     }
 }
 
+function clearWeatherData(){
+    document.querySelector(".locName").textContent = "not found";
+    document.querySelector(".weatherCondition").textContent = "";
+    this.tempNow.textContent = "";
+    this.feelsLike.textContent = "";
+    document.querySelector(".windSpeed").textContent = "";
+    document.querySelector(".humidity").textContent = "";
+    document.querySelector(".tempMaxBox").textContent = "";
+    document.querySelector(".tempMinBox").textContent = "";
+    document.querySelector(".sunriseTime").textContent = "";
+    document.querySelector(".sunsetTime").textContent = "";
+    document.querySelector(".cloudCover").textContent = "";
+    document.querySelector(".search-input").value = ""; 
+}
 // Fetch forecast weather data
 async function checkWeatherForecast(location) {
     try {
