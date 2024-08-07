@@ -32,6 +32,8 @@ body {
   color: white;
 }
 
+
+
 @media(min-width:320px){
     .btn{
       margin-left: 3rem;
